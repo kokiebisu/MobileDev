@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Lab02</string>
+    <string name="app_name">Reversify!</string>
+    <string name="title">We can Reverse the word for you!</string>
+    <string name="word_placeholder">Enter your word</string>
 </resources>
