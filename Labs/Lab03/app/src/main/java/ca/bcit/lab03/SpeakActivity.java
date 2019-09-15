@@ -14,4 +14,6 @@ public class SpeakActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
     }
+
+
 }

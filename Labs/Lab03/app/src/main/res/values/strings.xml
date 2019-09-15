@@ -2,4 +2,6 @@
     <string name="app_name">Lab03</string>
     <string name="buttonChangeBackground">Change Background Color</string>
     <string name="buttonSpeakActivity">Go to Speak Activity</string>
+    <string name="editTextSpeak">Write Something Here</string>
+    <string name="buttonGoBack">Go Back</string>
 </resources>
