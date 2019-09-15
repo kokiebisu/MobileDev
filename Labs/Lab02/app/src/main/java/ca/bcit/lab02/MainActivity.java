@@ -26,9 +26,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        wordInput = (EditText) findViewById(R.id.wordInput);
+        wordInput = findViewById(R.id.wordInput);
 
-        submitButton = (Button) findViewById(R.id.submit);
+        submitButton = findViewById(R.id.submit);
         resetButton = (Button) findViewById(R.id.reset);
 
         result = (TextView) findViewById(R.id.result);

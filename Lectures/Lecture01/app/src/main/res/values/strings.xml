@@ -1,8 +1,0 @@
-<resources>
-    <string name="app_name">DOWNTOWN ANDROID</string>
-    <string name="byeGreeting">Bye Downtown</string>
-    <string name="toggle">Toggle!</string>
-    <stirng-array name="seasons">
-        <item>Winter</item>
-    </stirng-array>
-</resources>
