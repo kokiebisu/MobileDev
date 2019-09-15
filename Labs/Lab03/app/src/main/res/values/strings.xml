@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Lab03</string>
+    <string name="buttonChangeBackground">Change Background Color</string>
+    <string name="buttonSpeakActivity">Go to Speak Activity</string>
+</resources>
