@@ -6,4 +6,5 @@
     <string name="buttonTextToSpeech">Say</string>
     <string name="buttonGoBack">Go Back</string>
     <string name="buttonCheckVersion">Check Your Version</string>
+    <string name="buttonSendSerial">Send Serial Number</string>
 </resources>

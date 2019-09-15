@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
@@ -44,7 +45,15 @@ public class MainActivity extends AppCompatActivity {
                 + " \n versionRelease " + versionRelease;
         Toast toast = Toast.makeText(this, messageText, Toast.LENGTH_SHORT);
         toast.show();
+    }
 
+    public void onSendSerial(View view) {
+        String deviceId = Settings.System.getString(getContentResolver(), Settings.System.ANDROID_ID);
+
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("text/plain");
+        intent.putExtra(Intent.EXTRA_TEXT, deviceId);
+        startActivity(intent);
     }
 
 }

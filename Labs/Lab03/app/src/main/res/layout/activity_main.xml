@@ -38,4 +38,14 @@
         android:layout_marginTop="10dp"
         android:onClick="onCheckVersion"
         android:text="@string/buttonCheckVersion" />
+
+    <Button
+        android:id="@+id/buttonSendSerial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonCheckVersion"
+        android:layout_alignLeft="@id/buttonChangeBackgroundColor"
+        android:layout_marginTop="10dp"
+        android:onClick="onSendSerial"
+        android:text="@string/buttonSendSerial" />
 </RelativeLayout>
