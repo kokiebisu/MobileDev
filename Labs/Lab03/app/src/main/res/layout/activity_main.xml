@@ -28,4 +28,13 @@
         android:layout_marginTop="10dp"
         android:onClick="onSpeakActivity"
         android:text="@string/buttonSpeakActivity" />
+
+    <Button
+        android:id="@+id/buttonCheckVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonSpeakActivity"
+        android:layout_alignLeft="@id/buttonChangeBackgroundColor"
+        android:layout_marginTop="10dp"
+        android:text="@string/buttonVersionActivity" />
 </RelativeLayout>
