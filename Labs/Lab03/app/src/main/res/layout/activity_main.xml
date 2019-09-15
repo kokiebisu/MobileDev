@@ -36,5 +36,6 @@
         android:layout_below="@id/buttonSpeakActivity"
         android:layout_alignLeft="@id/buttonChangeBackgroundColor"
         android:layout_marginTop="10dp"
-        android:text="@string/buttonVersionActivity" />
+        android:onClick="onCheckVersion"
+        android:text="@string/buttonCheckVersion" />
 </RelativeLayout>

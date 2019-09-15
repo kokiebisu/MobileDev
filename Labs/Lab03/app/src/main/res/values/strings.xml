@@ -5,5 +5,5 @@
     <string name="editTextSpeak">Write Something Here</string>
     <string name="buttonTextToSpeech">Say</string>
     <string name="buttonGoBack">Go Back</string>
-    <string name="buttonVersionActivity">Check Your Version</string>
+    <string name="buttonCheckVersion">Check Your Version</string>
 </resources>
