@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Intent</string>
+    <string name="send">Send Message</string>
+    <string name="back">Back</string>
+    <string name="sendToApp">Send message to another app</string>
+    <string name="sendToToast">Send message to a toast</string>
+    <string name="sendToSnackbar">Send message to a snackbar</string>
+</resources>
