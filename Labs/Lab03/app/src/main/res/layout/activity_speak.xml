@@ -23,9 +23,21 @@
         android:id="@+id/buttonGoBack"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/buttonTextToSpeech"
+        android:layout_alignLeft="@id/editTextSpeak"
+        android:layout_alignRight="@id/editTextSpeak"
+        android:layout_marginTop="10dp"
+        android:onClick="onGoBack"
+        android:text="@string/buttonGoBack" />
+
+    <Button
+        android:id="@+id/buttonTextToSpeech"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@id/editTextSpeak"
         android:layout_alignLeft="@id/editTextSpeak"
         android:layout_alignRight="@id/editTextSpeak"
         android:layout_marginTop="10dp"
-        android:text="@string/buttonGoBack" />
+        android:onClick="onSpeak"
+        android:text="@string/buttonTextToSpeech" />
 </RelativeLayout>
