@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnConstraint"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/constraint"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="8dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="onConstraintClick"/>
+
+    <Button
+        android:id="@+id/btnLinear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:onClick="onLinearClick"
+        android:text="@string/linear"
+        app:layout_constraintLeft_toLeftOf="@+id/btnConstraint"
+        app:layout_constraintRight_toRightOf="@+id/btnConstraint"
+        app:layout_constraintTop_toBottomOf="@+id/btnConstraint" />
+
+    <Button
+        android:id="@+id/btnRelative"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:onClick="onRelativeClick"
+        android:text="@string/relative"
+        app:layout_constraintLeft_toLeftOf="@+id/btnLinear"
+        app:layout_constraintRight_toRightOf="@+id/btnLinear"
+        app:layout_constraintTop_toBottomOf="@+id/btnLinear" />
+
+    <Button
+        android:id="@+id/btnGrid"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:onClick="onGridClick"
+        android:text="@string/grid"
+        app:layout_constraintLeft_toLeftOf="@+id/btnRelative"
+        app:layout_constraintRight_toRightOf="@+id/btnRelative"
+        app:layout_constraintTop_toBottomOf="@+id/btnRelative" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:onClick="onTableClick"
+        android:text="@string/table"
+        app:layout_constraintLeft_toLeftOf="@+id/btnGrid"
+        app:layout_constraintRight_toRightOf="@+id/btnGrid"
+        app:layout_constraintTop_toBottomOf="@+id/btnGrid" />
+
+</android.support.constraint.ConstraintLayout>
