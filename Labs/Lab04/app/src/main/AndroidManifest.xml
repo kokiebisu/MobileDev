@@ -9,11 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TableActivity"></activity>
-        <activity android:name=".GridActivity" />
-        <activity android:name=".RelativeActivity" />
-        <activity android:name=".LinearActivity" />
-        <activity android:name=".ConstraintActivity" />
+        <activity android:name=".TableActivity" android:configChanges="orientation|screenSize"/>
+        <activity android:name=".GridActivity"  android:configChanges="orientation|screenSize"/>
+        <activity android:name=".RelativeActivity"  android:configChanges="orientation|screenSize"/>
+        <activity android:name=".LinearActivity"  android:configChanges="orientation|screenSize"/>
+        <activity android:name=".ConstraintActivity" android:configChanges="orientation|screenSize"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

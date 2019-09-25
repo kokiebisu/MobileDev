@@ -1,0 +1,15 @@
+// Start the stopwatch running when the Start button is clicked
+public void onClickStart(View v) {
+  running = true;
+}
+
+// Stop the stopwatch running when the Stop button is clicked
+public void onClickStop(View v) {
+  running = false;
+}
+
+// Reset the stopwatch when the Reset button is clicked
+public void onClickReset(View v) {
+  running = false;
+  seconds = 0;
+}

@@ -1,0 +1,2 @@
+private int seconds = 0;
+private boolean running;

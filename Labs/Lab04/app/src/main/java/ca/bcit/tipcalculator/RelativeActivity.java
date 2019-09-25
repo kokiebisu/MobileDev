@@ -56,6 +56,22 @@ public class RelativeActivity extends AppCompatActivity
     }
 
     @Override
+    protected void onSaveInstanceState(Bundle outState)
+    {
+        final TextView text = findViewById(R.id.billAmountEditText);
+        CharSequence userText = text.getText();
+        outState.putString("savedText", userText.toString());
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedState) {
+        super.onRestoreInstanceState(savedState);
+        final TextView text = findViewById(R.id.billAmountEditText);
+        text.setText(savedState.getString("savedText"));
+    }
+
+    @Override
     public void onResume() {
         super.onResume();
 

@@ -32,6 +32,22 @@ public class ConstraintActivity extends AppCompatActivity
     float tipPercent = .15f;
 
     @Override
+    protected void onSaveInstanceState(Bundle outState)
+    {
+        final TextView text = findViewById(R.id.billAmountEditText);
+        CharSequence userText = text.getText();
+        outState.putString("savedText", userText.toString());
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedState) {
+        super.onRestoreInstanceState(savedState);
+        final TextView text = findViewById(R.id.billAmountEditText);
+        text.setText(savedState.getString("savedText"));
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_constraint);
@@ -55,7 +71,7 @@ public class ConstraintActivity extends AppCompatActivity
 
     }
 
-    @Override
+        @Override
     public void onResume() {
         super.onResume();
 

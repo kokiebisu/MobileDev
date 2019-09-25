@@ -1,0 +1,4 @@
+if (savedInstanceState != null) {
+   seconds = savedInstanceState.getInt("seconds");
+   running = savedInstanceState.getBoolean("running");
+}

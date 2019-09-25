@@ -1,0 +1,7 @@
+@Override
+protected void onStart() {
+   super.onStart();
+   if (wasRunning) {
+      running = true;
+   }
+}
