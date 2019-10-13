@@ -22,6 +22,7 @@ public class DetailActivity extends AppCompatActivity {
     TextView publisherTextView;
     TextView publishedDateTextView;
     TextView authorTextView;
+    TextView descriptionTextView;
     TextView identifierTextView;
     ImageView smallThumbnailImageView;
 
@@ -53,7 +54,7 @@ public class DetailActivity extends AppCompatActivity {
         String publisher = intent.getStringExtra("publisher");
         String publishedDate = intent.getStringExtra("publishedDate");
         String identifier = intent.getStringExtra("identifier");
-//        String description = intent.getStringExtra("description");
+        String description = intent.getStringExtra("description");
 
 
         titleTextView = findViewById(R.id.titleTextView);
@@ -62,6 +63,7 @@ public class DetailActivity extends AppCompatActivity {
         authorTextView = findViewById(R.id.authorTextView);
         identifierTextView = findViewById(R.id.identifierTextView);
         smallThumbnailImageView = findViewById(R.id.smallThumbnailImageView);
+        descriptionTextView = findViewById(R.id.descriptionTextView);
 
         ImageDownloader task = new ImageDownloader();
         Bitmap myImage;
@@ -77,6 +79,7 @@ public class DetailActivity extends AppCompatActivity {
         publishedDateTextView.setText(publishedDate);
         authorTextView.setText(author);
         identifierTextView.setText(identifier);
+        descriptionTextView.setText(description);
 
 
 

@@ -85,7 +85,12 @@ public class MainActivity extends AppCompatActivity {
                         String smallThumbnail = imageLinks.getString("smallThumbnail");
                         String publisher = volumeInfo.getString("publisher");
                         String publishedDate = volumeInfo.getString("publishedDate");
-//                        String description = volumeInfo.getString("description");
+                        String description = "";
+                        try {
+                            description = volumeInfo.getString("description").replaceAll("\"", "");
+                        } catch (Exception e) {
+                            Log.e("Empty", "Error");
+                        }
                         JSONArray industryIdentifiers = volumeInfo.getJSONArray("industryIdentifiers");
                         JSONObject isbn10Container = industryIdentifiers.getJSONObject(1);
                         String isbn10 = isbn10Container.getString("identifier");
@@ -100,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
                         book.setAuthors(author);
                         book.setPublisher(publisher);
                         book.setPublishedDate(publishedDate);
-//                        book.setDescription(description);
+                        book.setDescription(description);
                         book.setIdentifier(isbn10);
 
                         // adding contact to contact list
@@ -158,7 +163,7 @@ public class MainActivity extends AppCompatActivity {
                     intent.putExtra("author", bookList.get(i).getAuthors());
                     intent.putExtra("publisher", bookList.get(i).getPublisher());
                     intent.putExtra("publishedDate", bookList.get(i).getPublishedDate());
-//                    intent.putExtra("description", bookList.get(i).getDescription());
+                    intent.putExtra("description", bookList.get(i).getDescription());
                     intent.putExtra("identifier", bookList.get(i).getIdentifier());
                     startActivity(intent);
                 }
