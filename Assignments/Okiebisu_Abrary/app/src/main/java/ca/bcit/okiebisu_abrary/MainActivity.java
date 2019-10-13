@@ -1,9 +1,12 @@
 package ca.bcit.okiebisu_abrary;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -72,24 +75,33 @@ public class MainActivity extends AppCompatActivity {
                     for (int i = 0; i < bookJsonArray.length(); i++) {
                         JSONObject item = bookJsonArray.getJSONObject(i);
                         JSONObject volumeInfo = item.getJSONObject("volumeInfo");
-                        String title = volumeInfo.getString("title");
 
-//                        String firstName = c.getString("firstName");
-//                        String lastName = c.getString("lastName");
-//                        String occupation = c.getString("occupation");
-//                        String gender = c.getString("gender");
-//                        String pictureUrl = c.getString("pictureUrl");
+                        JSONObject imageLinks = volumeInfo.getJSONObject("imageLinks");
+                        JSONArray authorsJson = volumeInfo.getJSONArray("authors");
+                        String author = authorsJson.getString(0);
+
+
+                        String title = volumeInfo.getString("title");
+                        String smallThumbnail = imageLinks.getString("smallThumbnail");
+                        String publisher = volumeInfo.getString("publisher");
+                        String publishedDate = volumeInfo.getString("publishedDate");
+//                        String description = volumeInfo.getString("description");
+                        JSONArray industryIdentifiers = volumeInfo.getJSONArray("industryIdentifiers");
+                        JSONObject isbn10Container = industryIdentifiers.getJSONObject(1);
+                        String isbn10 = isbn10Container.getString("identifier");
+
 
                         // tmp hash map for single contact
                         Book book = new Book();
 
                         // adding each child node to HashMap key => value
                         book.setTitle(title);
-//                        book.sete(firstName);
-//                        book.setLastName(lastName);
-//                        book.setOccupation(occupation);
-//                        book.setGender(gender);
-//                        book.setPictureUrl(pictureUrl);
+                        book.setSmallThumbnail(smallThumbnail);
+                        book.setAuthors(author);
+                        book.setPublisher(publisher);
+                        book.setPublishedDate(publishedDate);
+//                        book.setDescription(description);
+                        book.setIdentifier(isbn10);
 
                         // adding contact to contact list
                         bookList.add(book);
@@ -137,7 +149,22 @@ public class MainActivity extends AppCompatActivity {
 
             // Attach the adapter to a ListView
             lv.setAdapter(adapter);
+            lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                    Intent intent = new Intent(getApplicationContext(), DetailActivity.class);
+                    intent.putExtra("title", bookList.get(i).getTitle());
+                    intent.putExtra("smallThumbnail", bookList.get(i).getSmallThumbnail());
+                    intent.putExtra("author", bookList.get(i).getAuthors());
+                    intent.putExtra("publisher", bookList.get(i).getPublisher());
+                    intent.putExtra("publishedDate", bookList.get(i).getPublishedDate());
+//                    intent.putExtra("description", bookList.get(i).getDescription());
+                    intent.putExtra("identifier", bookList.get(i).getIdentifier());
+                    startActivity(intent);
+                }
+            });
         }
+
     }
 
 }

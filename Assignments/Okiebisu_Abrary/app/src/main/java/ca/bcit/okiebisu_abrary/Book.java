@@ -7,7 +7,7 @@ public class Book {
 
     private String smallThumbnail;
 
-    private List<String> authors;
+    private String authors;
 
     private String publisher;
 
@@ -29,10 +29,10 @@ public class Book {
     public String getSmallThumbnail(){
         return this.smallThumbnail;
     }
-    public void setAuthors(List<String> authors){
+    public void setAuthors(String authors){
         this.authors = authors;
     }
-    public List<String> getAuthors(){
+    public String getAuthors(){
         return this.authors;
     }
     public void setPublisher(String publisher){
