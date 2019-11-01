@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Lab09</string>
+    <string name="hintTask">Task</string>
+    <string name="hintWho">Who</string>
+    <string name="hintDueDate">Due Date</string>
+    <string name="completed">Completed</string>
+    <string name="incompleted">Undone</string>
+    <string name="btnAddTask">Add Task</string>
+    <string name="enterNewName">Enter New Name</string>
+    <string name="btnUpdate">Update</string>
+    <string name="btnDelete">Delete</string>
+
+</resources>
