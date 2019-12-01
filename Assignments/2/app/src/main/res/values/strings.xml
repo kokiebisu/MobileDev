@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">okiebisu_charles_sinclair</string>
+    <string name="hintUserId">Name Here</string>
+    <string name="hintSystolicReading">Systolic Value Here</string>
+    <string name="hintDiastolicReading">Diastolic Value Here</string>
+    <string name="btnAdd">Add</string>
+    <string name="enterNewSystolic">Enter New Systolic</string>
+    <string name="enterNewDiastolic">Enter New Diastolic</string>
+    <string name="btnUpdate">Update</string>
+    <string name="btnDelete">Delete</string>
+
+</resources>
