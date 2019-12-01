@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     RadioButton complete;
     RadioButton incomplete;
     Button buttonAddTodo;
-    Boolean completeState;
+    boolean completeState = true;
 
     DatabaseReference databaseTodo;
 
@@ -79,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        complete.setChecked(true);
 
 
     }
@@ -114,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onSuccess(Object o) {
                 Toast.makeText(MainActivity.this,
-                        "Student Updated.",Toast.LENGTH_LONG).show();
+                        "Task Updated.",Toast.LENGTH_LONG).show();
             }
         });
 
@@ -167,6 +168,16 @@ public class MainActivity extends AppCompatActivity {
 
         final EditText editTextDueDate = dialogView.findViewById(R.id.editTextDueDate);
         editTextDueDate.setText(dueDate);
+
+        final RadioButton completeRadio = dialogView.findViewById(R.id.radio_complete);
+
+        final RadioButton incompleteRadio = dialogView.findViewById(R.id.radio_incomplete);
+
+        if (completed) {
+            completeRadio.setChecked(true);
+        } else{
+            incompleteRadio.setChecked(true);
+        }
 
         final Button btnUpdate = dialogView.findViewById(R.id.buttonUpdate);
 

@@ -5,11 +5,11 @@ public class Todo {
     String task;
     String who;
     String dueDate;
-    Boolean done;
+    boolean done;
 
     public Todo() {}
 
-    public Todo(String todoId, String task, String who, String dueDate, Boolean done) {
+    public Todo(String todoId, String task, String who, String dueDate, boolean done) {
         this.todoId = todoId;
         this.task = task;
         this.who = who;
@@ -18,23 +18,23 @@ public class Todo {
     }
 
     public String getTodoId() {
-        return todoId;
+        return this.todoId;
     }
 
     public String getTask() {
-        return task;
+        return this.task;
     }
 
     public String getWho() {
-        return who;
+        return this.who;
     }
 
     public String getDueDate() {
-        return dueDate;
+        return this.dueDate;
     }
 
     public Boolean getDone() {
-        return done;
+        return this.done;
     }
 
     public void setTodoId(String todoId) {

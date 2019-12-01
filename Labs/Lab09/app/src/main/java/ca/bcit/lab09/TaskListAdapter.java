@@ -46,7 +46,8 @@ public class TaskListAdapter extends ArrayAdapter<Todo> {
         tvDueDate.setText(todo.getDueDate());
         if (todo.getDone()) {
             tvCompleted.setText("Complete");
-        } else {
+        }
+        else {
             tvCompleted.setText("Incomplete");
         }
         return listViewItem;
