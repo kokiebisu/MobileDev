@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="50dp"
+    android:padding="8dp"
+    android:background="@color/white"
+    android:onClick="clickItem">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="18sp"
+        android:visibility="visible"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/colorAccentText"/>
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="18sp"
+        android:paddingBottom="8dp"
+        android:visibility="visible"
+        android:textColor="@color/darkGray"/>
+
+    <TextView
+        android:id="@+id/locationDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="18sp"
+        android:paddingBottom="8dp"
+        android:visibility="visible"
+        android:textColor="@color/darkGray"/>
+
+    <TextView
+        android:id="@+id/vendorID"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:text=""/>
+
+</LinearLayout>
